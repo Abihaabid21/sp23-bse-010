@@ -1,0 +1,94 @@
+<div class="container mt-5">
+    <h1 class="mb-4">Shopping Cart</h1>
+
+    <% if (cart && cart.length > 0) { %>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% cart.forEach(item => { %>
+                        <tr>
+                            <td>
+                                <img src="/<%= item.picture %>" alt="<%= item.name %>" style="width: 50px; height: 50px; object-fit: cover;">
+                                <%= item.name %>
+                            </td>
+                            <td>$<%= item.price %></td>
+                            <td>
+                                <div class="input-group" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary" type="button" 
+                                            onclick="updateQuantity('<%= item.id %>', -1)">-</button>
+                                    <input type="text" class="form-control text-center" 
+                                           value="<%= item.quantity %>" readonly>
+                                    <button class="btn btn-outline-secondary" type="button" 
+                                            onclick="updateQuantity('<%= item.id %>', 1)">+</button>
+                                </div>
+                            </td>
+                            <td>$<%= item.price * item.quantity %></td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" 
+                                        onclick="removeItem('<%= item.id %>')">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-end"><strong>Total:</strong></td>
+                        <td><strong>$<%= total %></strong></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="text-end mt-3">
+            <a href="/" class="btn btn-secondary">Continue Shopping</a>
+            <a href="/cart/checkout" class="btn btn-primary">Proceed to Checkout</a>
+        </div>
+    <% } else { %>
+        <div class="alert alert-info">
+            Your cart is empty. <a href="/">Continue shopping</a>
+        </div>
+    <% } %>
+</div>
+
+<script>
+function updateQuantity(productId, change) {
+    fetch(`/cart/update/${productId}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ change })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.reload();
+        }
+    });
+}
+
+function removeItem(productId) {
+    if (confirm('Are you sure you want to remove this item?')) {
+        fetch(`/cart/remove/${productId}`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.reload();
+            }
+        });
+    }
+}
+</script> 

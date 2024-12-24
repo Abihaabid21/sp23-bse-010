@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body text-center">
+            <h1 class="card-title text-success">
+                <i class="fas fa-check-circle"></i> Order Confirmed!
+            </h1>
+            <p class="card-text">Thank you for your purchase! Your order has been successfully placed.</p>
+            <div class="mt-4">
+                <h4>Order Details</h4>
+                <p>Order ID: <%= order._id %></p>
+                <p>Total Amount: $<%= order.total %></p>
+                <p>Status: <%= order.status %></p>
+            </div>
+            <div class="mt-4">
+                <a href="/" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+</div> 

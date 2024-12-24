@@ -1,0 +1,151 @@
+
+
+
+
+
+
+
+<div class="container">
+  <div>
+      <section class="section" id="first" style="background-image: url('images/pg1.1.webp');">
+          <div class="buttonContainer" id="buttonContainer1">
+          </div>
+      </section>
+      <section class="section" id="second" style="background-image: url('images/1.2.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+      <section class="section" id="third" style="background-image: url('images/1.3.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+      <section class="section" id="fourth" style="background-image: url('images/1.4.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+      <section class="section" id="fifth" style="background-image: url('images/1.5.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+      <section class="section" id="sixth" style="background-image: url('images/1.6.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+      <section class="section" id="seventh" style="background-image: url('images/1.7.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+      <section class="section" id="eigth" style="background-image: url('images/1.8.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+      <section class="section" id="ninth" style="background-image: url('images/1.9.webp');">
+          <div class="buttonContainer" id="buttonContainer2">
+          </div>
+      </section>
+  </div>
+</div>
+
+<!-- Closing body tag -->
+
+
+        </div>
+        <div class="sticky-nav">
+          <ul>
+            <li><a id="secondNavLink" href="#second">WINNTER2024</a></li>
+            <li><a id="thirdNavLink" href="#third">SALE</a></li>
+            <li><a id="thirdNavLink" href="#third">UNSTITCHED</a></li>
+            <li><a id="thirdNavLink" href="#third">RTW</a></li>
+            <li><a id="thirdNavLink" href="#third">CHIKANKARI</a></li>
+            <li><a id="thirdNavLink" href="#third">NEWINREADYTOWEAR</a></li>
+            <li><a id="thirdNavLink" href="#third">FORMALS</a></li>
+            <li><a id="thirdNavLink" href="#third">FESTIVE</a></li>
+            <li><a id="thirdNavLink" href="#third">FRAGRANCE</a></li>
+          </ul>
+        </div>
+
+       
+      </div>
+    </main>
+
+    <div class="checkbox-container">
+      <label for="outerWear-checkbox" class="checkbox-label">
+        <input type="checkbox" id="second-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      <label for="bottoms-checkbox" class="checkbox-label">
+        <input type="checkbox" id="third-checkbox" class="round-checkbox" />
+      </label>
+      
+      
+         
+      
+        
+      
+      </label>
+    </div>
+
+
+        <!-- Right Arrow Slider (Juniors) -->
+        <div class="right-slider">
+          <a href="/admin/suits">winter collection →</a>
+      </div>
+  </div>
+
+  
+
+
+   <script>
+// JavaScript to hide navbar and right slider when scrolling to footer
+window.addEventListener('scroll', function() {
+    const footer = document.querySelector('.footer');
+    const navbar = document.querySelector('.sticky-navbar');
+    const rightSlider = document.querySelector('.right-slider'); // Change this selector as necessary
+
+    // Check if the elements exist
+    if (!footer || !navbar || !rightSlider) {
+        console.error('One of the elements is not found:', { footer, navbar, rightSlider });
+        return; // Exit if any element is not found
+    }
+
+    const footerPosition = footer.getBoundingClientRect().top; // Get footer position
+    console.log('Footer position:', footerPosition); // Log the footer position
+
+    // Hide navbar and right slider when footer is in view
+    if (footerPosition <= window.innerHeight) {
+        navbar.style.display = 'none'; // Hide navbar
+        rightSlider.style.display = 'none'; // Hide right slider
+        console.log('Hiding navbar and right slider'); // Log when hiding
+    } else {
+        navbar.style.display = 'block'; // Show navbar
+        rightSlider.style.display = 'block'; // Show right slider
+        console.log('Showing navbar and right slider'); // Log when showing
+    }
+});
+
+
+    </script> 
+    
+    
+  </body>
+</html>

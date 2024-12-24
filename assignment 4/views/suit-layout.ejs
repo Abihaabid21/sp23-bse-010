@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orient-textiles</title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (optional, for interactive components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+   
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <!-- Menu Icon (Offcanvas Toggle) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasMenu"
+          aria-controls="offcanvasMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-uppercase" href="#">Orient</a>
+  
+        <!-- Navbar Right -->
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-heart"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin/dashboard">Admin-panel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a>
+            </li>
+            <li class="nav-item">
+              <select class="form-select form-select-sm border-0 bg-transparent">
+                <option value="pkr">PKR</option>
+                <option value="usd">USD</option>
+                <option value="aed">AED</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled">
+          <li><a href="#" class="d-block py-2">WOMEN</a></li>
+          <li><a href="#" class="d-block py-2">SALE</a></li>
+          <li><a href="#" class="d-block py-2">NEW IN</a></li>
+          <li><a href="#" class="d-block py-2">UNSTITCHED</a></li>
+          <li><a href="#" class="d-block py-2">READY TO WEAR</a></li>
+          <li><a href="#" class="d-block py-2">FORMALS</a></li>
+          <li><a href="#" class="d-block py-2">FRAGRANCE</a></li>
+          <li><a href="#" class="d-block py-2">WESTERN</a></li>
+          <li><a href="#" class="d-block py-2">ACCESSORIES</a></li>
+          <li><a href="#" class="d-block py-2">BOTTOMS</a></li>
+          <li><a href="#" class="d-block py-2">FOOTWEAR</a></li>
+          <li><a href="#" class="d-block py-2">MENSWEAR</a></li>
+          <li><a href="#" class="d-block py-2">TRACK YOUR ORDER</a></li>
+          <li><a href="#" class="d-block py-2">BARCODE SCAN</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- This is where the content of the page will be injected -->
+    <main>
+        <%- body %>
+    </main>

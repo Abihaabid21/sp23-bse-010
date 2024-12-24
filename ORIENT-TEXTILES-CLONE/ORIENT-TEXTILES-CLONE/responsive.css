@@ -1,0 +1,31 @@
+@media (max-width: 750px) {
+
+    .buttonContainer button:first-child {
+        width: 30vw;
+    }
+
+    .buttonContainer button {
+        width: 30vw;
+        margin: 2px 0;
+    }
+
+    #gotToLeft {
+        left: 25px;
+        font-size: 15px;
+
+    }
+
+    #goToRight {
+        right: 25px;
+        font-size: 15px;
+
+    }
+
+    .sticky-nav ul{
+        display: none;
+    }
+    #sectionForResponsiveStickyNav{
+        display: flex;
+
+    }
+}

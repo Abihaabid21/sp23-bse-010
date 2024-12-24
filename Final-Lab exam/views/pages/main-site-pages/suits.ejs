@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h1 class="mb-4 text-center text-uppercase text-primary fw-bold">Products</h1>
+  
+    <!-- Product Grid -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <% products.forEach(product => { %>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="/<%= product.picture %>" class="card-img-top" alt="<%= product.name %>" style="height: auto; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title text-truncate"><%= product.name %></h5>
+              <p class="card-text text-success fw-bold">$<%= product.price %></p>
+              <a href="/cart/add/<%= product._id %>" class="btn btn-primary w-100">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center mt-4">
+          <% for (let index = 1; index <= totalPages; index++) { %>
+            <li class="page-item ">
+              <a class="page-link" href="/admin/suits/<%= index %>"><%= index %></a>
+            </li>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
+    

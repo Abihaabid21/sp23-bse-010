@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <h1 class="text-center text-uppercase text-primary mb-4">Create a New Product</h1>
+  
+    <form action="/admin/create" method="POST" enctype="multipart/form-data" class="bg-light p-4 rounded shadow">
+      <div class="form-group mb-3">
+        <label for="name" class="form-label fw-bold">Product Name:</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          class="form-control" 
+          placeholder="Enter product name" 
+          required>
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="price" class="form-label fw-bold">Price:</label>
+        <input 
+          type="number" 
+          id="price" 
+          name="price" 
+          class="form-control" 
+          placeholder="Enter product price" 
+          required>
+      </div>
+  
+      <div class="form-group mb-4">
+        <label for="file" class="form-label fw-bold">Picture:</label>
+        <input 
+          name="file" 
+          type="file" 
+          class="form-control">
+      </div>
+  
+      <button type="submit" class="btn btn-primary w-100">Create</button>
+    </form>
+  </div>
+  
